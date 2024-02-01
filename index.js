@@ -1,64 +1,89 @@
-// Write a function that takes a number as an argument and returns 'even' or 'odd'.
+// 1. Write a function that takes a number as an argument and returns 'even' or 'odd'.
+    //create said function with number as parameter
+    function evenOrOdd(number) {
+        return (number % 2 === 0) ? "even" : "odd";
+    }
 
-// console.log(evenOrOdd(5)); // Output: 'odd'
-// console.log(evenOrOdd(4)); // Output: 'even'
-
-// ------------------------------------------------------------
-
-// Create a function that checks if the length of a given string is greater than a specified number. Return true or false.
-
-// console.log(isStringLengthGreaterThan("Hello, World!", 5)); // Output: true
-
-// console.log(isStringLengthGreaterThan("Hello", 5)); // Output: false
+console.log(evenOrOdd(5)); // Output: 'odd'
+console.log(evenOrOdd(4)); // Output: 'even'
 
 // ------------------------------------------------------------
 
-// Implement a function that concatenates two strings and returns the result.
+// 2.Create a function that checks if the length of a given string is greater than a specified number. Return true or false.
+function isStringLengthGreaterThan(string, number) {
+    return (string.length > number) ? true : false;
+}
 
-// console.log(concatenateStrings("Hello", "World")); // Output: 'HelloWorld'
+console.log(isStringLengthGreaterThan("Hello, World!", 5)); // Output: true
 
-// ------------------------------------------------------------
-
-// Write a function using interpolation to generate a string that includes the value of a given variable.
-
-// console.log(interpolateVariable("My age is: ", 25)); // Output: 'My age is: 25'
-
-// console.log(interpolateVariable("My age is: ", 30)); // Output: 'My age is: 25'
+console.log(isStringLengthGreaterThan("Hello", 5)); // Output: false
 
 // ------------------------------------------------------------
 
-// Develop a function that calculates the sum of numbers in a given range.
+// 3. Implement a function that concatenates two strings and returns the result.
+function concatenateStrings(string, string2) {
+    return string + string2;
+}
+console.log(concatenateStrings("Hello", "World")); // Output: 'HelloWorld'
+
+// ------------------------------------------------------------
+
+// 4. Write a function using interpolation to generate a string that includes the value of a given variable.
+function interpolateVariable(string) {
+    let number = 25 
+    return string + `${number}`;
+}
+console.log(interpolateVariable("My age is: ", 25)); // Output: 'My age is: 25'
+
+console.log(interpolateVariable("My age is: ", 30)); // Output: 'My age is: 25'
+
+// ------------------------------------------------------------
+
+// 5. Develop a function that calculates the sum of numbers in a given range.
+// function sumRange(num, number) {
+
+
+// }
 
 // console.log(sumRange(1, 5)); // Output: 15
 // console.log(sumRange(1, 6)); // Output: 21
 
 // ------------------------------------------------------------
 
-// Create a function that sums up all odd numbers in a given range using a loop.
+// 6. Create a function that sums up all odd numbers in a given range using a loop.
+// function sumOddNumbersInRange(index, number) {
 
+// }
 // console.log(sumOddNumbersInRange(1, 10)); // Output: 25
 // console.log(sumOddNumbersInRange(1, 11)); // Output: 36
 
 // ------------------------------------------------------------
 
-// Implement a function that returns the first element of an array.
-
-// console.log(getFirstElement([1, 2, 3])); // Output: 1
-// console.log(getFirstElement([2, 3])); // Output: 2
-
-// ------------------------------------------------------------
-
-// Write a function to get the last element of an array.
-
-// console.log(getLastElement([1, 2, 3])); // Output: 3
-// console.log(getLastElement([1, 2, 3, 4])); // Output: 4
+// 7. Implement a function that returns the first element of an array.
+function getFirstElement(arr) {
+    return arr[0];
+}
+console.log(getFirstElement([1, 2, 3])); // Output: 1
+console.log(getFirstElement([2, 3])); // Output: 2
 
 // ------------------------------------------------------------
 
-// Build a function to replace an element at a specific index in an array and returns the altered array.
+// 8. Write a function to get the last element of an array.
+function getLastElement(arr) {
+    return arr[arr.length-1];
+}
+console.log(getLastElement([1, 2, 3])); // Output: 3
+console.log(getLastElement([1, 2, 3, 4])); // Output: 4
 
-// console.log(replaceElementAtIndex([1, 2, 3], 1, 5)); // Output: [1, 5, 3]
-// console.log(replaceElementAtIndex([1, 2, 3], 2, 6)); // Output: [1, 5, 6]
+// ------------------------------------------------------------
+
+// 9. Build a function to replace an element at a specific index in an array and returns the altered array.
+function replaceElementAtIndex(arr, index, element) {
+    arr[index] = element
+    return arr;
+}
+console.log(replaceElementAtIndex([1, 2, 3], 1, 5)); // Output: [1, 5, 3]
+console.log(replaceElementAtIndex([1, 2, 3], 2, 6)); // Output: [1, 5, 6]
 
 // ------------------------------------------------------------
 
